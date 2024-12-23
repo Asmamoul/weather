@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div class="title">
+        <h1>Weather App</h1>
+    </div>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter city" id="city-search" />
+            <button id="search-button">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAChklEQVR4nO2Zu24TQRSGPxeElgYbEVIYHoECCJdXQAIH+YKECA+AxEVESAl0wAsgUUEKpCiiIDFKDYGGS96AhhZSBZGQ2MFwpH+lKQxi8czYu+wnjbTy5f/3jPecOTOGgoKR5AAwDcwDa8A6sKPxBfig9y4DFUaQM0Ab6AC9vxz22WXgNCPAEWDFubku8Aq4BhwDysAeDbs+DlwHVvXZ5HsvgMPDCqIFfNWNfAPuAftTfN8Cuw9sSmMDaBCZOWc2F4DxAbQOAYuO3iyRuCvDH7ouedK9CuzGCqYlIzOsBdCfcoKpEzCxk5y4FcoEmHFyphrCYMXJiZCUnJxph1gneqowE4RnXJWwB5zyKdyWqJXYWFhpNs8ln21HRwtYmnViUGyd6aq9seuBuaKZeUl8Xsv7kg+xeYlZ2xGbG/J+7ENsTWLWO8VmUt7vfIitSyxmfiRU5P3Zh9i2xMaIz155f89LIBt5ebQ++kx22xTF5qS8rQznovw+8iE2LTHbnsbmjbzP+XpOkxbFS6uQskXpAPt8iS5rZqyRi8UDeVpL740TEt0aQht/1Ld425khX/v0fpj2M3k9D2FQ1cLU03Y0FLflYSeTB0OZNJzDBzso8M0F5/DhLIGZdYKZ8fSYlfRLJEHs6sSGWMEkOWOHbP/KhJMT7rDS2yQCdSdnNlWa06wzZZXYLacx7PYJpkEEqk41S4xX1VpMajEd06jotZvqndybXlBiN4cZDDqyWUr5t4JtD572aUZ/F0ydiJR1UPAEeK8Suq3F7RPwFniom/rTtqAxCsH4wsp7p08wF8lRMC0yyFSegqn9D8E0yWgwO0UwGSkAc2SU885jdoeMU4v5d3ZBwa8Z+Ak4rhMJLuUtjQAAAABJRU5ErkJggg==" alt="search--v1">
+
+
+
+            </button>
+        </div>
+        <div class="weather-details" style="display: none;">
+            <div class="city"></div>
+            <div class="weather">
+                <h1 class="temp"></h1>
+                <h2 class="description"></h2>
+            </div>
+            <img class="weather-icon" src="" alt="Weather icon">
+            <div class="details">
+                <div class="col">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACVklEQVR4nO2WT2sUMRjGI7XoxU+guMlBUa89efJmv4I3YSc99jN4UETxDxVNZI+CCLbowZ0U9OJF0SLsIP7ptDtfQbFvnOnBspFs7doddm03TeIE5oGX3Q0zm/cXnrw8CNWqVWvf+ri+fiJJs6VOmsF2dZ91vmSnUCjNd9LutyTN1O7qr62tHUdVV5JmS+XmBxCr2VNUdXXSDMYBJKvdH6jqSsY1/6ds7jW/rI5EIn9y+bU6GiQAjfObVBQqEvkNa39abnjh8fOhsrVP80Vxnop8SwPoT/07HAClDkUif7vd/KBW9HoQFpprF5dKzfdLrwcBQOP8zSgAvR6EhaI4lyMBRA5BAFBRrIwCiOLiXRgWav+cpXHeK9mn11zevBgEwA5EJIr32jb65K00r0W4VLvr2OyjoUJVF7EI4CQqTApQLvS/o4IvAGdRwYuFXEYFHwBOo4IPCzmNCj4AnEYFHxZyGhW8ALiMCr7GqLOoMFaLaooweXUvAMzlNf0sqpQW1RRmsr1X8wMIBuLCFXX4oNvO24oamMvr+23+b8GtgwJQG1EDPygahMHWxAAMeuT+xmnTfZu2ooY+yclPf+c+wF2jTZXFqIEZfDAFIFx+Nel/zmbUIFx+NwZgsGkCQG1GDcwkmFtIbpgARDajBubw2RiAwScTAGozauiLaH4HzEYptRk1Tj6EcyZjFHP41WjBGRMA61GDMLjnbYS60ExLTWMGryawzkv9DqqSZlpqmnBY0Nb4l230yVeu+fKdwBzu6AmDuZT90t8Z3G4wODv0cK1atZAv/Qbg12F5S7ae7QAAAABJRU5ErkJggg==" alt="dew-point">
+                    <span class="humidity"></span>
+                </div>
+                <div class="col">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACrUlEQVR4nO2Zz48MQRTHP6ysxTg4+Ad2/TiRiLAbbMKFzMb4uUScWBxwY7kIEQ7ChUQkDuImQtwRzq4uIoyEXWMkVsTBj5EdjFTyJJ2Xmu7q7qnZ7qQ/yTts5m299+2qeq+7CgoKCjrFfGAMeAy8BX4BdeAJcBwokQO2AlNAK8Q+AqNkmNPA3wgR/834nSKDbAf+OIoIitkVI8ZcYD9wH5gAfgLfgJfAHRmrN62QNyrJBnAeWCIJ9ANngO+WZWb2VBR7gEmHh1MFKmmEfFAi1rXxWwv8UMFNAWjHbOB6zJluAReBWUmE7JRNbmxbhO9ZFfRRiG8SES2xSySkx9FvwLK8bIxakjOl/CYwBCwCFgCDwFX5Te9BU0W90WtJzkZV+ZnluyZk3BXAe/U/r2I84NgstyRoI9iPpmV/RbFSqllw/N144orjHhmT2TLF41CM8a+p8W/jqd80VaDDIf4lx/IcZMhSkjtCH7BaNqlumhMJEo1ioYrxJcx5BHiXojS2ZGa20HlKKo7pW04NMKmIg/hhvYr1Isy5lkKEKYkb8MctFc+8h7WlLN8aLok3xPcusNdnXQc2Wvah16bog83AVyXiNTCHHLBYVscDy7eQ+XtT1ACdqFq+bdzlSaStWj5tGjjhOqVpqpZPeyad3Zk4VcunTQHP5f3KVKyC3DPioWo15CXyHrDPc+PsatUyzWwYz9S6tJmb8oHljXIXq9ZviZcb+oBVwA1JPihm0sMHWFeoSIcOijlCTrmshJhrilyyzPHYKPO4HuTNGD2OB8yuR6szgrnD+CwWddh9Tgl5SIaoqVeSdocQg5ajz2NkiKpl3V8AlsqF0IDMhBZRz1ofqSS8ottBBjkZ89LU+GeWMvApQkRdbsIyzzzgAPBURDUleXPNcFRuowoKCugu/wB7e3E/ppSV3AAAAABJRU5ErkJggg==" alt="wind--v1">
+                    <span class="wind"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/javas.js"></script>
+</body>
+</html>
